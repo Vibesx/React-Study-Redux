@@ -5,8 +5,8 @@ import classes from "./Counter.module.css";
 
 const Counter = () => {
 	const dispatch = useDispatch();
-	const counter = useSelector((state) => state.counter);
-	const show = useSelector((state) => state.showCounter);
+	const counter = useSelector((state) => state.counter.counterValue);
+	const show = useSelector((state) => state.counter.showCounter);
 
 	const incrementHandler = () => {
 		// we need to call the function in these cases because it returns an action object with type and everything else we need
